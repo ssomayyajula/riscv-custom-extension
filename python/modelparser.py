@@ -127,9 +127,8 @@ def main():
                         'to its default.')
     parser.add_argument('-t',
                         '--toolchain',
-                        default=os.path.join(
-                            os.path.expanduser("~"),
-                            'projects/riscv-gnu-toolchain'))
+                        default=os.path.abspath(
+                            '/root/riscv-gnu-toolchain'))
     parser.add_argument('--tc-only',
                         action='store_true',
                         help='If set, only the toolchain is extended.')
@@ -138,7 +137,7 @@ def main():
                         help='If set, only gem5 is extended')
     parser.add_argument('-v',
                         '--verbose',
-                        default=0,
+                        default=3,
                         action='count',
                         help='Increase output verbosity.')
 

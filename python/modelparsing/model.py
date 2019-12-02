@@ -30,6 +30,8 @@ import clang.cindex
 import logging
 import subprocess
 
+clang.cindex.Config.set_library_file('/usr/lib/llvm-4.0/lib/libclang-4.0.so.1')
+
 from exceptions import ConsistencyError
 
 logger = logging.getLogger(__name__)
